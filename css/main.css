@@ -1,0 +1,164 @@
+:root{
+	font-size: 16px;
+}
+
+body{
+	margin: 0;
+	padding: 0;	
+}
+
+.main-container{
+	margin: auto;
+	width:94%;
+	max-width: 1200px;
+	
+}
+
+.navbar{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 10px;
+	background-color: #F8F9FA;
+}
+
+.navbrand a{
+	text-decoration: none;
+	color: black;
+	font-size: 2rem;
+
+}
+
+.nav-collapse-btn{
+	display: none;
+}
+
+.nav-link-container{
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+
+.nav-link-container ul{
+	margin: 0;
+}
+
+.nav-link{
+	display: inline;
+	padding-right: 1rem;
+}
+
+.nav-link a{
+	text-decoration:none;
+	color: rgba(0,0,0,0.5);
+	font-size: 1.3rem
+}
+
+a.disable{
+	color: #ADAEAF;
+}
+
+a.disable:hover{
+	cursor: default;
+}
+
+a.active{
+	color: black;
+}
+
+.nav-link a:not(.disable):not(.active):hover{
+	color:rgba(0,0,0,0.7);
+}
+
+
+.dropdown-container{
+	position: relative;
+}
+
+.dropdown-container a:after{
+	display: inline-flex;
+	width: 0;
+	height: 0;
+	content: "";
+	margin-left: .25rem;	
+	border-top: .35rem solid;
+	border-right: .35rem solid transparent;
+	border-left: .35rem solid transparent;
+	vertical-align: middle;
+}
+
+.dropdown{
+	min-width: 200px;
+	border: 1px solid black;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: white;
+	display: none;	
+}
+
+.dropdown-item-list{
+	padding:0;
+	list-style-type: none;
+}
+
+.dropdown-item{
+	display: block;
+	padding: 1rem 0.25rem 0;
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.dropdown-item:hover{
+	background-color: #E0E2E4;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px){
+
+	.navbar{
+		flex-wrap: wrap;
+	}
+
+	.navbrand{
+		width: 80%;
+	}
+
+	.nav-collapse-btn{
+		display: flex;
+		width: 20%;
+		justify-content: flex-end;
+		font-size: 2rem;
+		align-items: center;
+	}
+
+	.nav-collapse-btn:hover{
+		cursor: pointer;
+	}
+
+	.nav-link-container{
+		width: 100%;
+		display: none;
+	}
+
+	.nav-link-container ul {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.nav-link-container ul li{
+		display: block;
+		padding-right: 0;
+	}
+
+	.nav-link{
+		margin-top: 0.5rem;
+	}
+
+	.dropdown{
+		position: initial;
+		width: 100%;
+	}
+}
